@@ -1,57 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Drawer from "@material-ui/core/Drawer";
-import Box from "@material-ui/core/Box";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Avatar from "@material-ui/core/Avatar";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
-import ArrowBack from "@material-ui/icons/ArrowBack";
-import AssignmentInd from "@material-ui/icons/AssignmentInd";
+import React, { useEffect, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import Icon from "@iconify/react"
+import menuIcon from "@iconify-icons/mdi/menu"
+import menuCloseIcon from "@iconify-icons/mdi/menu-close"
 import Home from "@material-ui/icons/Home";
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
-import { makeStyles } from "@material-ui/core/styles";
-import avatar from "../hacker.png";
-
-import Footer from "../components/Footer";
-
-const useStyles = makeStyles((theme) => ({
-  appbar: {
-    // background: "transparent",
-    background: "#232526",
-background: "-webkit-linear-gradient(to right, #232526, #414345)",
-background: "linear-gradient(to right,  #232526, #414345)",
-
-    margin: 0,
-  },
-  arrow: {
-    color: "tomato",
-  },
-  title: {
-    color: "tan",
-  },
-  menuSliderContainer: {
-    width: 250,
-    background: "#511",
-    height: "100%",
-  },
-  avatar: {
-    display: "block",
-    margin: "0.5rem auto",
-    width: theme.spacing(13),
-    height: theme.spacing(13),
-  },
-  listItem: {
-    color: "tan",
-  },
-}));
+import AssignmentInd from "@material-ui/icons/AssignmentInd";
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
@@ -60,55 +15,116 @@ const menuItems = [
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 ];
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
 
-  const classes = useStyles();
+export default function NavBar(props) {
+	const [menuOpen, setMenuOpen] = useState(false)
+	const [windowSize, updateWindowSize] = useState({
+		height: window.innerHeight,
+		width: window.innerWidth,
+	})
 
-  const sideList = () => (
-    <Box className={classes.menuSliderContainer} component="div">
-      <Avatar className={classes.avatar} src={avatar} alt="Janit Chawla" />
-      <Divider />
-      <List>
-        {menuItems.map((item, i) => (
-          <ListItem
-            button
-            key={i}
-            className={classes.listItem}
-            onClick={() => setOpen(false)}
-            component={Link}
-            to={item.listPath}
-          >
-            <ListItemIcon className={classes.listItem}>
-              {item.listIcon}
-            </ListItemIcon>
-            <ListItemText primary={item.listText} />
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+	useEffect(() => {
+		window.addEventListener("resize", () => {
+			updateWindowSize({
+				height: window.innerHeight,
+				width: window.innerWidth,
+			})
+		})
+	}, [])
 
-  return (
-    <React.Fragment>
-      <Box component="nav">
-        <AppBar position="static" className={classes.appbar}>
-          <Toolbar>
-            <IconButton onClick={() => setOpen(true)}>
-              <ArrowBack className={classes.arrow} />
-            </IconButton>
-            <Typography variant="h5" className={classes.title}>
-              Portfolio
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </Box>
-      <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
-        {sideList()}
-        <Footer />
-      </Drawer>
-    </React.Fragment>
-  );
-};
+	function onMenuClick() {
+		setMenuOpen(!menuOpen)
+	}
 
-export default Navbar;
+	useEffect(() => {
+		document.body.classList.toggle("no-scroll", menuOpen)
+	}, [menuOpen])
+
+	return (
+		<nav className='navbar fixed-top bg-black h-auto navbar-dark'>
+			<div
+				className='navbar-brand text-uppercase font-weight-bolder ml-4'
+				href='/'>
+				Portfolio
+			</div>
+			<ul className='navbar-links d-none d-md-flex ml-auto text-white list-unstyled my-1'>
+				{menuItems.map((item, index) => {
+					return (
+						<li key={index} className='mr-4'>
+							<a
+								className='text-white text-uppercase text-decoration-none'
+								href={item.listPath}
+								target={item.listIcon}>
+								{item.listText}
+							</a>
+						</li>
+					)
+				})}
+			</ul>
+			<Icon
+				icon={menuOpen ? menuCloseIcon : menuIcon}
+				className='d-block d-md-none'
+				// passing these properties through class is not having any effect
+				color='white'
+				height='100%'
+				width='auto'
+				onClick={onMenuClick}
+			/>
+			<AnimatePresence exitBeforeEnter>
+				{menuOpen && (
+					<motion.div
+						className='bg-black position-absolute d-flex d-md-none align-items-center'
+						style={{
+							...windowSize,
+							top: 0,
+							left: 0,
+							zIndex: -1,
+						}}
+						initial={{ x: "-100vw", opacity: 0 }}
+						animate={{ x: 0, opacity: 1 }}
+						exit={{ x: "100vw", opacity: 0 }}
+						transition={{
+							duration: 0.6,
+							when: "beforeChildren",
+							ease: "easeInOut",
+						}}>
+						<ul className='navbar-links d-flex d-md-none flex-column text-white list-unstyled pl-4'>
+							{menuItems.map((item, index) => {
+								return (
+									<motion.li
+										initial={{ x: -100, opacity: 0 }}
+										animate={{
+											x: 0,
+											opacity: 1,
+											transition: {
+												duration: 0.5,
+												delay: index / 1.3,
+												ease: "easeInOut",
+											},
+										}}
+										exit={{
+											x: 100,
+											opacity: 0,
+											transition: {
+												duration: 0.3,
+												delay: 0,
+											},
+										}}
+										key={index}
+										className='mb-4'>
+										<a
+											className='text-white text-uppercase h1 text-decoration-none'
+											href={item.listPath}
+								      target={item.listIcon}>
+							      	{item.listText}
+										</a>
+									</motion.li>
+								)
+							})}
+						</ul>
+					</motion.div>
+				)}
+			</AnimatePresence>
+		</nav>
+	)
+}
