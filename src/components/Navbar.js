@@ -11,8 +11,9 @@ import AssignmentInd from "@material-ui/icons/AssignmentInd";
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
+  { listIcon: <Apps />, listText: "Projects", listPath: "/portfolio" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
+  { listIcon: <ContactMail />, listText: 'Skills', listPath: '/skills'}
 ];
 
 
@@ -41,11 +42,11 @@ export default function NavBar(props) {
 	}, [menuOpen])
 
 	return (
-		<nav className='navbar fixed-top bg-black h-auto navbar-dark'>
+		<nav className='navbar bg-dark fixed-top h-auto navbar-dark'>
 			<div
 				className='navbar-brand text-uppercase font-weight-bolder ml-4'
 				href='/'>
-				Portfolio
+				{"<NAV />"}
 			</div>
 			<ul className='navbar-links d-none d-md-flex ml-auto text-white list-unstyled my-1'>
 				{menuItems.map((item, index) => {
@@ -73,7 +74,7 @@ export default function NavBar(props) {
 			<AnimatePresence exitBeforeEnter>
 				{menuOpen && (
 					<motion.div
-						className='bg-black position-absolute d-flex d-md-none align-items-center'
+						className='bg-dark position-absolute d-flex d-md-none align-items-center'
 						style={{
 							...windowSize,
 							top: 0,

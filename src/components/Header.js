@@ -20,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
     color: "tan",
     textTransform: "uppercase",
   },
+  info: {
+    color: 'white',
+    width: "65vw",
+    margin: 'auto',
+    fontSize: '1.2rem'
+  },
   typedContainer: {
     position: "absolute",
     top: "50%",
@@ -35,6 +41,7 @@ const Header = () => {
   const classes = useStyles();
 
   return (
+    <React.Fragment>
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
         <Avatar className={classes.avatar} src={avatar} alt="Janit" />
@@ -54,7 +61,14 @@ const Header = () => {
           loop
         />
       </Typography>
+      {/* <Typography className={classes.info} variant="h6">
+        <Typed className={classes.para} strings={["Proficient with MERN stack and languages such as HTML, CSS, JS, C/C++ and Python. I'm also an open source enthusiast and love to contribute and collaborate to build something exciting!"]} />
+      </Typography> */}
+      <div className={classes.info} >
+      Proficient with MERN stack and languages such as HTML, CSS, JS, C/C++ and Python. I'm also an open source enthusiast and love to contribute and collaborate to build something exciting!
+      </div>
     </Box>
+    </React.Fragment>
   );
 };
 
