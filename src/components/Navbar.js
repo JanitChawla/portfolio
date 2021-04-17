@@ -11,7 +11,7 @@ import AssignmentInd from "@material-ui/icons/AssignmentInd";
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Projects", listPath: "/portfolio" },
+  { listIcon: <Apps />, listText: "Projects", listPath: "/project" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
   { listIcon: <ContactMail />, listText: 'Skills', listPath: '/skills'}
 ];

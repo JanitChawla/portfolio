@@ -4,7 +4,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Home from "./components";
 import Resume from "./components/Resume";
 import Navbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
+import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Skills from './components/Skills'
 
@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/resume" component={Resume} />
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Route exact path="/project" component={Project} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/skills" component={Skills} />
       </Switch>

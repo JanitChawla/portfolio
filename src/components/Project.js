@@ -79,7 +79,7 @@ const projects = [
   },
 ];
 
-const Portfolio = () => {
+const Project = () => {
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>
@@ -120,4 +120,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Project;
