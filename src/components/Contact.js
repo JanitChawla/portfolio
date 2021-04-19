@@ -70,15 +70,22 @@ const Contact = () => {
           <Typography variant="h5" className={classes.heading}>
             Hire or Contact me...
           </Typography>
+          <form name='contact' 
+          data-netlify="true" 
+          method='post'
+          onSubmit="submit">
+            <input type="hidden" name="form-name" value="contact" />
           <InputField
             fullWidth={true}
             label="Name"
+            name="name"
             variant="outlined"
             inputProps={{ className: classes.input }}
           />
           <InputField
             fullWidth={true}
             label="Email"
+            name="email"
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
@@ -88,17 +95,19 @@ const Contact = () => {
             label="Message"
             variant="outlined"
             multiline
+            name="message"
             rows={4}
             inputProps={{ className: classes.input }}
           />
-          <Button
+          <Button type="submit"
             variant="outlined"
             fullWidth={true}
             endIcon={<Send />}
             className={classes.button}
-          >
-            Contact Me
+          >Contact Me
+            {/* <a class="mailto" href="mailto:janitchawla31.com">Contact Me</a> */}
           </Button>
+          </form>
         </Box>
       </Grid>
     </Box>
