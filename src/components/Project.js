@@ -9,17 +9,18 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-
-import project1 from "../images/html-css-javascript-lg.jpg";
+import project1 from "../images/color.jpeg";
 import project2 from "../images/html-css-javascript.jpg";
 import project3 from "../images/javascript-fullstack.jpg";
 import project4 from "../images/mern-stack.jpg";
 import project5 from "../images/react-redux.jpg";
 import project6 from "../images/react.png";
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: "#233",
+    marginTop: '30px',
     height: "100%",
   },
   cardContainer: {
@@ -30,12 +31,12 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
-    name: "Project 1",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-    consequatur magni quod nesciunt necessitatibus molestiae non
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Color Game",
+    description: `Simple Color game in which you willbe provided with rgb color codes and you will have
+     to guess color from the drop down menu. You have 2 modes easy and hard.`,
     image: project1,
+    link: "https://github.com/JanitChawla/colorgame",
+    live: "https://janitchawla.github.io/colorgame/",
   },
   {
     name: "Project 2",
@@ -92,7 +93,7 @@ const Project = () => {
                 <CardMedia
                   component="img"
                   alt="Project 1"
-                  height="140"
+                  height="150"
                   image={project.image}
                 />
                 <CardContent>
@@ -105,11 +106,11 @@ const Project = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
-                  Share
+                <Button size="small" color="primary" href={project.link} >
+                  <GitHubIcon />
                 </Button>
                 <Button size="small" color="primary">
-                  Live Demo
+                  <a href={project.live}>Live Demo</a>
                 </Button>
               </CardActions>
             </Card>
