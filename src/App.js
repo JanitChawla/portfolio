@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Home from "./components";
-import Resume from "./components/Resume";
+// import Resume from "./components/Resume";
 import Navbar from "./components/Navbar";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
