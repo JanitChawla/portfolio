@@ -10,7 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import project1 from "../images/color.jpeg";
-import project2 from "../images/html-css-javascript.jpg";
+import project2 from "../images/yt-api.jpg";
 import project3 from "../images/javascript-fullstack.jpg";
 import project4 from "../images/mern-stack.jpg";
 import project5 from "../images/react-redux.jpg";
@@ -39,12 +39,14 @@ const projects = [
     live: "https://janitchawla.github.io/colorgame/",
   },
   {
-    name: "Project 2",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Youtube API",
+    description: `This basically calls
+    the Youtube API and displays the results on the page with 25
+    recommendations on the side. This also have search bar in which you
+    can search for the videos and play them`,
     image: project2,
+    link: "https://github.com/JanitChawla/YoutubePlayer",
+    live: "https://janitchawla.github.io/YoutubePlayer/"
   },
   {
     name: "Project 3",
