@@ -21,17 +21,17 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
   },
   info: {
-    color: 'white',
+    color: '#D5D5D5',
     width: "65vw",
     margin: 'auto',
     fontSize: '1.2rem'
   },
   typedContainer: {
     position: "absolute",
-    top: "50%",
+    top: "45%",
     left: "50%",
     transform: "translate(-50%,-50%)",
-    width: "100vw",
+    width: "95vw",
     textAlign: "center",
     zIndex: 1,
   },

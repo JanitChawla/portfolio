@@ -6,7 +6,7 @@ import Home from "./components";
 import Navbar from "./components/Navbar";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
-import Skills from './components/Skills'
+// import Skills from './components/Skills'
 
 import "./App.css";
 
@@ -17,11 +17,9 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        {/* <Route exact path="/resume" component={Resume} /> */}
         <Route exact path="/resume" />
         <Route exact path="/project" component={Project} />
         <Route exact path="/contact" component={Contact} />
-        <Route exact path="/skills" component={Skills} />
       </Switch>
     </React.Fragment>
   );

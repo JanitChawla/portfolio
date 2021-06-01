@@ -1,5 +1,8 @@
 body {
+  /* background: url(pexels-frank-cone-3214110.jpg) no-repeat center center fixed; */
+  /* min-height: 100vh; */
   background: url(pexels-hasan-albari-1229861.jpg) no-repeat center center fixed;
+  /* background: url(pexels-photo-3980364.jpeg) no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -13,7 +13,7 @@ const menuItems = [
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "https://drive.google.com/file/d/1ZGS3qhi1D9J1Lfco3W43Gin3X8Evzuhs/view" },
   { listIcon: <Apps />, listText: "Projects", listPath: "/project" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
-  { listIcon: <ContactMail />, listText: 'Skills', listPath: '/skills'}
+//   { listIcon: <ContactMail />, listText: 'Skills', listPath: '/skills'}
 ];
 
 
