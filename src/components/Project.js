@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import project1 from "../images/color.jpeg";
 import project2 from "../images/yt-api.jpg";
-import project3 from "../images/javascript-fullstack.jpg";
+import project3 from "../images/Capture.PNG";
 import project4 from "../images/mern-stack.jpg";
 import project5 from "../images/react-redux.jpg";
 import project6 from "../images/react.png";
@@ -49,11 +49,9 @@ const projects = [
     live: "https://janitchawla.github.io/YoutubePlayer/"
   },
   {
-    name: "Project 3",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Burger Builder",
+    description: `Burger Builder app in which a user can register and make a burger and Order. Technology Used: React for Frontend , Redux for State management and Firebase for backend and authentication`,
+    live: "https://burger-builder-ff5ba.firebaseapp.com/",
     image: project3,
   },
   {

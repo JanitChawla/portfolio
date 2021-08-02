@@ -12,10 +12,10 @@ const useStyles = makeStyles(theme =>({
     background: "#222",
     top: "100vh",
     width: "100%",
-    position: "absolute",
+    position: "relative",
     marginTop: "19vh",
     [theme.breakpoints.down('576')]: {
-      top: "117vh" }
+      top: "117vw" }
   },
   root: {
     "& .MuiSvgIcon-root": {
