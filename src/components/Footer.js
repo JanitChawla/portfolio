@@ -6,17 +6,19 @@ import Twitter from "@material-ui/icons/Twitter";
 import Instagram from "@material-ui/icons/Instagram";
 import Github from "@material-ui/icons/GitHub";
 import LinkedIn from "@material-ui/icons/LinkedIn";
+import './Footer.scss'
 
 const useStyles = makeStyles(theme =>({
-  bottomNavContainer: {
-    background: "#222",
-    top: "100vh",
-    width: "100%",
-    position: "relative",
-    marginTop: "19vh",
-    [theme.breakpoints.down('576')]: {
-      top: "117vw" }
-  },
+  // bottomNavContainer: {
+  //   background: "#222",
+  //   top: "100vh",
+  //   width: "100%",
+  //   position: "relative",
+  //   marginTop: "19vh",
+  //   [theme.breakpoints.down('576')]: {
+  //     top: "117vh",
+  //    },
+  // },
   root: {
     "& .MuiSvgIcon-root": {
       fill: "tan",
@@ -31,7 +33,7 @@ const useStyles = makeStyles(theme =>({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <BottomNavigation className={classes.bottomNavContainer}>
+    <BottomNavigation className='bottomNavContainer' style={{backgroundColor: '#222'}}>
       <BottomNavigationAction icon={<LinkedIn />} href="https://www.linkedin.com/in/janit-chawla-478457191/" className={classes.root} />
       <BottomNavigationAction icon={<Twitter />} href="https://twitter.com/janitchawla/with_replies?s=08" className={classes.root} />
       <BottomNavigationAction icon={<Instagram />} href="https://www.instagram.com/chawlajanit" className={classes.root} />

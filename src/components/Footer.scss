@@ -1,0 +1,14 @@
+.bottomNavContainer {
+    top: 60vh;
+    width: 100%;
+    position: relative;
+    margin-top: 19vh;
+    // margin-top: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .bottomNavContainer {
+        top: 60vh;
+    }
+}
+

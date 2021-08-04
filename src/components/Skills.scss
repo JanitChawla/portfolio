@@ -1,17 +1,23 @@
 .skills {
     top: 70vh;
-    position: absolute;
+    position: relative;
     color: white;
     width: 90%;
     left: 5%;
 }
 .skillsheader {
     top: 70vh;
-    position: absolute;
+    position: relative;
     color: tan;
     // margin-left: 11vw;
     text-align: center;
     width: 100%;
     margin-top: 3vh;
     font-size: 1.7rem;
+}
+
+@media screen and (max-width: 647px) {
+    .skills {
+        top: 80vh;
+    }
 }

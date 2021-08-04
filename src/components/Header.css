@@ -1,0 +1,28 @@
+.title {
+    color: tomato
+  }
+.subtitle {
+    color: tan;
+    text-transform:uppercase,
+  }
+  .info {
+    color: #D5D5D5;
+    width: 65vw;
+    margin: auto;
+    font-size: 1.2rem
+  }
+  .typedContainer {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 95vw;
+    text-align: center;
+    z-index: 1;
+  }
+
+@media screen and (max-width: 647px) {
+    .typedContainer {
+        top: 50%;
+    }
+}
