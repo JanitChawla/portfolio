@@ -12,14 +12,13 @@ import Typography from "@material-ui/core/Typography";
 import project1 from "../images/color.jpeg";
 import project2 from "../images/yt-api.jpg";
 import project3 from "../images/Capture.PNG";
-import project4 from "../images/mern-stack.jpg";
+import project4 from "../images/qualiassist.png";
 import project5 from "../images/react-redux.jpg";
 import project6 from "../images/react.png";
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
     marginTop: '30px',
     height: "100%",
   },
@@ -56,10 +55,8 @@ const projects = [
   },
   {
     name: "Project 4",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: `A website made by me as a intern at Metafic. Technology Used: React for Frontend and Bootstrap for styling`,
+    live: "https://qualiassist.com/",
     image: project4,
   },
   {
