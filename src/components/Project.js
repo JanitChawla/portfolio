@@ -13,13 +13,13 @@ import project1 from "../images/color.jpeg";
 import project2 from "../images/yt-api.jpg";
 import project3 from "../images/Capture.PNG";
 import project4 from "../images/qualiassist.png";
-import project5 from "../images/react-redux.jpg";
-import project6 from "../images/react.png";
-import GitHubIcon from '@material-ui/icons/GitHub';
+import project5 from "../images/enactusimage.png";
+import project6 from "../images/peable.png";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    marginTop: '30px',
+    marginTop: "30px",
     height: "100%",
   },
   cardContainer: {
@@ -32,7 +32,7 @@ const projects = [
   {
     name: "Color Game",
     description: `Simple Color game in which you willbe provided with rgb color codes and you will have
-     to guess color from the drop down menu. You have 2 modes easy and hard.`,
+     to guess color from the drop down menu. You have 2 modes easy and hard. Made this with HTML/CSS/JS`,
     image: project1,
     link: "https://github.com/JanitChawla/colorgame",
     live: "https://janitchawla.github.io/colorgame/",
@@ -45,7 +45,13 @@ const projects = [
     can search for the videos and play them`,
     image: project2,
     link: "https://github.com/JanitChawla/YoutubePlayer",
-    live: "https://janitchawla.github.io/YoutubePlayer/"
+    live: "https://janitchawla.github.io/YoutubePlayer/",
+  },
+  {
+    name: "Enactus Adgitm",
+    description: `Main goal was to rebuild their website. I decided to build a team of people who will work on website with me on this project. By doing this project I learned a lot new things `,
+    live: "https://www.enactusadgitm.in/",
+    image: project5,
   },
   {
     name: "Burger Builder",
@@ -54,25 +60,16 @@ const projects = [
     image: project3,
   },
   {
-    name: "Project 4",
-    description: `A website made by me as a intern at Metafic. Technology Used: React for Frontend and Bootstrap for styling`,
+    name: "Qualiassist",
+    description: `A website made by me as a intern at Metafic. Technology Used: React for Frontend and Bootstrap for styling. Technology used: React`,
     live: "https://qualiassist.com/",
     image: project4,
   },
+
   {
-    name: "Project 5",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    image: project5,
-  },
-  {
-    name: "Project 6",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    name: "Peable",
+    description: `I made this website for a startup with a team member. I was provided with the design and we made it in 3-4 days. It's a static site made with HTML/CSS/JS`,
+    live: "https://peable.in/",
     image: project6,
   },
 ];
@@ -103,7 +100,7 @@ const Project = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary" href={project.link} >
+                <Button size="small" color="primary" href={project.link}>
                   <GitHubIcon />
                 </Button>
                 <Button size="small" color="primary">
