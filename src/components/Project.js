@@ -15,6 +15,7 @@ import project3 from "../images/Capture.PNG";
 import project4 from "../images/qualiassist.png";
 import project5 from "../images/enactusimage.png";
 import project6 from "../images/peable.png";
+import project7 from "../images/ddd.png";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,6 +30,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const projects = [
+  {
+    name: "Enactus Adgitm",
+    description: `Main goal was to rebuild their website. I decided to build a team of people who will work on website with me on this project. By doing this project I learned a lot new things `,
+    live: "https://www.enactusadgitm.in/",
+    image: project5,
+  },
+  {
+    name: "Design Development Days",
+    description: `A website for Design Development Days'22. DDD'22 was an event for ui/ux designers. Tech Stack used: React, Tailwind, Headless-Ui `,
+    live: "https://ddd.dexignare.in/",
+    image: project7,
+  },
   {
     name: "Color Game",
     description: `Simple Color game in which you willbe provided with rgb color codes and you will have
@@ -47,18 +60,14 @@ const projects = [
     link: "https://github.com/JanitChawla/YoutubePlayer",
     live: "https://janitchawla.github.io/YoutubePlayer/",
   },
-  {
-    name: "Enactus Adgitm",
-    description: `Main goal was to rebuild their website. I decided to build a team of people who will work on website with me on this project. By doing this project I learned a lot new things `,
-    live: "https://www.enactusadgitm.in/",
-    image: project5,
-  },
+
   {
     name: "Burger Builder",
     description: `Burger Builder app in which a user can register and make a burger and Order. Technology Used: React for Frontend , Redux for State management and Firebase for backend and authentication`,
     live: "https://burger-builder-ff5ba.firebaseapp.com/",
     image: project3,
   },
+
   {
     name: "Qualiassist",
     description: `A website made by me as a intern at Metafic. Technology Used: React for Frontend and Bootstrap for styling. Technology used: React`,
