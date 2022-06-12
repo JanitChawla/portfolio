@@ -10,7 +10,7 @@ import AssignmentInd from "@material-ui/icons/AssignmentInd";
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
-  { listIcon: <AssignmentInd />, listText: "Resume", listPath: "https://drive.google.com/file/d/1Au7S4s9B39OqZ_gx_3QNJoFm2VYAeq8i/view?usp=sharing" },
+  { listIcon: <AssignmentInd />, listText: "Resume", listPath: "https://drive.google.com/file/d/1SjyCMyP4eNqMBaOdSbDfL0vVptXKjQOY/view" },
   { listIcon: <Apps />, listText: "Projects", listPath: "/project" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 //   { listIcon: <ContactMail />, listText: 'Skills', listPath: '/skills'}
