@@ -33,7 +33,7 @@ const projects = [
   {
     name: "Enactus Adgitm",
     description: `Main goal was to rebuild their website. I decided to build a team of people who will work on website with me on this project. By doing this project I learned a lot new things `,
-    live: "https://www.enactusadgitm.in/",
+    live: "https://main--enactusadgitm-new.netlify.app/",
     image: project5,
   },
   {
